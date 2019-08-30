@@ -3,13 +3,14 @@ countrycode <- aoi_list[1]
 ## Download data for CAFI countries 
 for(countrycode in aoi_list){
   
-  if(!file.exists(paste0(gfc_dir,"gfc_",countrycode,"_",threshold,"_map_clip_pct.tif"))){
+  #if(!file.exists(paste0(gfc_dir,"gfc_",countrycode,"_",threshold,"_map_clip_pct.tif"))){
+   aoi <- readOGR(dsn = paste0(root,"gfc_wrapper_GC/","aoi_buffer"), layer = "GNQ_geo_buffer15")
+
     
-    
-    aoi   <- getData('GADM',
-                     path=gfcdwn_dir,
-                     country= countrycode,
-                     level=0)
+    #aoi   <- getData('GADM',
+    #                 path=gfcdwn_dir,
+    #                 country= countrycode,
+    #                 level=0)
 
     aoi <- spTransform(aoi,CRS('+init=epsg:4326'))
     (bb    <- extent(aoi))
@@ -89,7 +90,7 @@ for(countrycode in aoi_list){
         ))
 
         print(to_merge)
-      } #### END OF EXISTS MERGE
+     # } #### END OF EXISTS MERGE
 
     } #### END OF MERGE TILES BY TYPE
 

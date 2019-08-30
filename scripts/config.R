@@ -3,7 +3,7 @@ root <- "~"
 setwd(root)
 root       <- paste0(getwd(),'/')
 gfcdwn_dir <- paste0(root,"downloads/gfc/2018/")
-rootdir     <- paste0(root,"gfc_wrapper/")
+rootdir     <- paste0(root,"gfc_wrapper_GC/")
 scriptdir   <- paste0(rootdir,"scripts/")
 data_dir    <- paste0(rootdir,"data/")
 tmp_dir     <- paste0(rootdir,"tmp/")

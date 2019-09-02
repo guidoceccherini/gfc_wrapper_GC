@@ -93,6 +93,7 @@ for(countrycode in aoi_list){
      # } #### END OF EXISTS MERGE
 
     } #### END OF MERGE TILES BY TYPE
+    }
 
 
     #################### COMBINATION INTO NATIONAL SCALE MAP
@@ -159,7 +160,7 @@ for(countrycode in aoi_list){
     
     } #### END OF FILE EXISTS
   
-}#### END OF COUNTRY
+#### END OF COUNTRY
 
 ############################################################
 system(sprintf("rm -f %s",
